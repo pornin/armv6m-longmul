@@ -52,4 +52,4 @@ int64_t  longmul_ss( int32_t x,  int32_t y);
 int64_t  longmul_us(uint32_t x,  int32_t y);
 ```
 
-All three "longmul" function have cost **20 cycles**.
+All three "longmul" functions have cost **20 cycles**.
