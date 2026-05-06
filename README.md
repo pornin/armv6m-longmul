@@ -41,9 +41,9 @@ it can be compiled along with the compiler-provided one, for test
 purposes. If you want to reuse it as a *replacement* of the stock
 `__aeabi_lmul()` function, rename it in the assembly source code.
 
-Also provided at `longmul_uu()`, `longmul_ss()` and `longmul_us()`, which
+Also provided are `longmul_uu()`, `longmul_ss()` and `longmul_us()`, which
 implement multiplications of 32-bit integers with a 64-bit output; since
-operands are shorter than the result, signedness matter, hence three
+operands are shorter than the result, signedness matters, hence three
 functions are provided for unsigned, signed, and mixed combinations:
 
 ```
@@ -52,4 +52,6 @@ int64_t  longmul_ss( int32_t x,  int32_t y);
 int64_t  longmul_us(uint32_t x,  int32_t y);
 ```
 
-All three "longmul" functions have cost **20 cycles**.
+All three "longmul" functions have cost **20 cycles**. Relevant files
+are [longmul_uu.s](longmul_uu.s), [longmul_ss.s](longmul_ss.s) and
+[longmul_us.s](longmul_us.s).
